@@ -1,11 +1,11 @@
-import { OWWindow } from "@overwolf/overwolf-api-ts";
+import { OWWindow } from '@overwolf/overwolf-api-ts';
 
 // A base class for the app's foreground windows.
 // Sets the modal and drag behaviors, which are shared accross the desktop and in-game windows.
 export class AppWindow {
   protected currWindow: OWWindow;
   protected mainWindow: OWWindow;
-  protected maximized: boolean = false;
+  protected maximized = false;
 
   constructor(windowName) {
     this.mainWindow = new OWWindow('background');

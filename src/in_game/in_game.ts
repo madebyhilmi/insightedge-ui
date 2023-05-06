@@ -1,11 +1,7 @@
-import {
-  OWGames,
-  OWGamesEvents,
-  OWHotkeys
-} from "@overwolf/overwolf-api-ts";
+import { OWGames, OWGamesEvents, OWHotkeys } from '@overwolf/overwolf-api-ts';
 
-import { AppWindow } from "../AppWindow";
-import { kHotkeys, kWindowNames, kGamesFeatures } from "../consts";
+import { AppWindow } from '../AppWindow';
+import { kHotkeys, kWindowNames, kGamesFeatures } from '../constants';
 
 import WindowState = overwolf.windows.WindowStateEx;
 
@@ -47,7 +43,7 @@ class InGame extends AppWindow {
       this._gameEventsListener = new OWGamesEvents(
         {
           onInfoUpdates: this.onInfoUpdates.bind(this),
-          onNewEvents: this.onNewEvents.bind(this)
+          onNewEvents: this.onNewEvents.bind(this),
         },
         gameFeatures
       );
@@ -75,7 +71,7 @@ class InGame extends AppWindow {
           return true;
       }
 
-      return false
+      return false;
     });
     this.logLine(this._eventsLog, e, shouldHighlight);
   }
@@ -83,7 +79,10 @@ class InGame extends AppWindow {
   // Displays the toggle minimize/restore hotkey in the window header
   private async setToggleHotkeyText() {
     const gameClassId = await this.getCurrentGameClassId();
-    const hotkeyText = await OWHotkeys.getHotkeyText(kHotkeys.toggle, gameClassId);
+    const hotkeyText = await OWHotkeys.getHotkeyText(
+      kHotkeys.toggle,
+      gameClassId
+    );
     const hotkeyElem = document.getElementById('hotkey');
     hotkeyElem.textContent = hotkeyText;
   }
@@ -96,14 +95,18 @@ class InGame extends AppWindow {
       console.log(`pressed hotkey for ${hotkeyResult.name}`);
       const inGameState = await this.getWindowState();
 
-      if (inGameState.window_state === WindowState.NORMAL ||
-        inGameState.window_state === WindowState.MAXIMIZED) {
+      if (
+        inGameState.window_state === WindowState.NORMAL ||
+        inGameState.window_state === WindowState.MAXIMIZED
+      ) {
         this.currWindow.minimize();
-      } else if (inGameState.window_state === WindowState.MINIMIZED ||
-        inGameState.window_state === WindowState.CLOSED) {
+      } else if (
+        inGameState.window_state === WindowState.MINIMIZED ||
+        inGameState.window_state === WindowState.CLOSED
+      ) {
         this.currWindow.restore();
       }
-    }
+    };
 
     OWHotkeys.onHotkeyDown(kHotkeys.toggle, toggleInGameWindow);
   }
@@ -131,7 +134,7 @@ class InGame extends AppWindow {
   private async getCurrentGameClassId(): Promise<number | null> {
     const info = await OWGames.getRunningGameInfo();
 
-    return (info && info.isRunning && info.classId) ? info.classId : null;
+    return info && info.isRunning && info.classId ? info.classId : null;
   }
 }
 

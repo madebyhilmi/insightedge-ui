@@ -1,10 +1,6 @@
-import {
-  OWGames,
-  OWGameListener,
-  OWWindow
-} from '@overwolf/overwolf-api-ts';
+import { OWGames, OWGameListener, OWWindow } from '@overwolf/overwolf-api-ts';
 
-import { kWindowNames, kGameClassIds } from "../consts";
+import { kWindowNames, kGameClassIds } from '../constants';
 
 import RunningGameInfo = overwolf.games.RunningGameInfo;
 import AppLaunchTriggeredEvent = overwolf.extensions.AppLaunchTriggeredEvent;
@@ -28,13 +24,13 @@ class BackgroundController {
     // When a a supported game game is started or is ended, toggle the app's windows
     this._gameListener = new OWGameListener({
       onGameStarted: this.toggleWindows.bind(this),
-      onGameEnded: this.toggleWindows.bind(this)
+      onGameEnded: this.toggleWindows.bind(this),
     });
 
-    overwolf.extensions.onAppLaunchTriggered.addListener(
-      e => this.onAppLaunchTriggered(e)
+    overwolf.extensions.onAppLaunchTriggered.addListener(e =>
+      this.onAppLaunchTriggered(e)
     );
-  };
+  }
 
   // Implementing the Singleton design pattern
   public static instance(): BackgroundController {
