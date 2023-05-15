@@ -18,12 +18,13 @@ class InGame extends AppWindow {
 
   private constructor() {
     super(kWindowNames.inGame);
-
+    this.handleTabHold = this.handleTabHold.bind(this);
     this._eventsLog = document.getElementById('eventsLog');
     this._infoLog = document.getElementById('infoLog');
 
-    this.setToggleHotkeyBehavior();
-    this.setToggleHotkeyText();
+    // this.setToggleHotkeyBehavior();
+    // this.setToggleHotkeyText();
+    overwolf.settings.hotkeys.onHold.addListener(this.handleTabHold);
   }
 
   public static instance() {
@@ -109,6 +110,27 @@ class InGame extends AppWindow {
     };
 
     OWHotkeys.onHotkeyDown(kHotkeys.toggle, toggleInGameWindow);
+  }
+  private async handleTabHold(hotkeyEvent) {
+    console.log(`state = ${hotkeyEvent.state}`);
+    console.log(`name = ${hotkeyEvent.name}`);
+    console.log(`second.construction = ${this.currWindow}`);
+    const inGameState = await this.currWindow.getWindowState();
+    if (hotkeyEvent.name === kHotkeys.toggle) {
+      if (
+        hotkeyEvent.state === 'down' &&
+        (inGameState.window_state === WindowState.MINIMIZED ||
+          inGameState.window_state === WindowState.CLOSED)
+      ) {
+        this.currWindow.restore();
+      } else if (
+        hotkeyEvent.state === 'up' &&
+        (inGameState.window_state === WindowState.NORMAL ||
+          inGameState.window_state === WindowState.MAXIMIZED)
+      ) {
+        this.currWindow.minimize();
+      }
+    }
   }
 
   // Appends a new line to the specified log

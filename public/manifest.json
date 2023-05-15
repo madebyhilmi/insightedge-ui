@@ -2,9 +2,9 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "InsightEdge",
-    "author": "Binary Hive",
-    "version": "0.1.0",
+    "name": "Sample App",
+    "author": "Overwolf",
+    "version": "1.0.1",
     "minimum-overwolf-version": "0.160.0",
     "description": "An example app for developers new to Overwolf",
     "dock_button_title": "InsightEdge",
@@ -22,8 +22,10 @@
     "hotkeys": {
       "sample_app_ts_showhide": {
         "title": "Show/Hide In-Game Window",
-        "action-type": "toggle",
-        "default": "Ctrl+F"
+        "action-type": "custom",
+        "default": "Tab",
+        "passthrough": true,
+        "hold": true
       }
     },
     "externally_connectable": {
