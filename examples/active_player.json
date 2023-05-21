@@ -1,0 +1,147 @@
+{
+  "abilities": {
+    "E": {
+      "abilityLevel": 0,
+      "displayName": "Spirit Fire",
+      "id": "NasusE",
+      "rawDescription": "GeneratedTip_Spell_NasusE_Description",
+      "rawDisplayName": "GeneratedTip_Spell_NasusE_DisplayName"
+    },
+    "Passive": {
+      "displayName": "Soul Eater",
+      "id": "NasusPassive",
+      "rawDescription": "GeneratedTip_Passive_NasusPassive_Description",
+      "rawDisplayName": "GeneratedTip_Passive_NasusPassive_DisplayName"
+    },
+    "Q": {
+      "abilityLevel": 1,
+      "displayName": "Siphoning Strike",
+      "id": "NasusQ",
+      "rawDescription": "GeneratedTip_Spell_NasusQ_Description",
+      "rawDisplayName": "GeneratedTip_Spell_NasusQ_DisplayName"
+    },
+    "R": {
+      "abilityLevel": 0,
+      "displayName": "Fury of the Sands",
+      "id": "NasusR",
+      "rawDescription": "GeneratedTip_Spell_NasusR_Description",
+      "rawDisplayName": "GeneratedTip_Spell_NasusR_DisplayName"
+    },
+    "W": {
+      "abilityLevel": 0,
+      "displayName": "Wither",
+      "id": "NasusW",
+      "rawDescription": "GeneratedTip_Spell_NasusW_Description",
+      "rawDisplayName": "GeneratedTip_Spell_NasusW_DisplayName"
+    }
+  },
+  "championStats": {
+    "abilityHaste": 8,
+    "abilityPower": 0,
+    "armor": 46,
+    "armorPenetrationFlat": 0,
+    "armorPenetrationPercent": 1,
+    "attackDamage": 67,
+    "attackRange": 125,
+    "attackSpeed": 0.9570000767707825,
+    "bonusArmorPenetrationPercent": 1,
+    "bonusMagicPenetrationPercent": 1,
+    "critChance": 0,
+    "critDamage": 175,
+    "currentHealth": 132.94972229003906,
+    "healShieldPower": 0,
+    "healthRegenRate": 4.003434181213379,
+    "lifeSteal": 0.09000000357627869,
+    "magicLethality": 0,
+    "magicPenetrationFlat": 0,
+    "magicPenetrationPercent": 1,
+    "magicResist": 32,
+    "maxHealth": 631,
+    "moveSpeed": 430.20001220703125,
+    "omnivamp": 0,
+    "physicalLethality": 0,
+    "physicalVamp": 0,
+    "resourceMax": 572,
+    "resourceRegenRate": 1.4900000095367432,
+    "resourceType": "MANA",
+    "resourceValue": 566.1549072265625,
+    "spellVamp": 0,
+    "tenacity": 5
+  },
+  "currentGold": 125.49991607666016,
+  "fullRunes": {
+    "generalRunes": [
+      {
+        "displayName": "Lethal Tempo",
+        "id": 8008,
+        "rawDescription": "perk_tooltip_LethalTempo",
+        "rawDisplayName": "perk_displayname_LethalTempo"
+      },
+      {
+        "displayName": "Triumph",
+        "id": 9111,
+        "rawDescription": "perk_tooltip_9111",
+        "rawDisplayName": "perk_displayname_9111"
+      },
+      {
+        "displayName": "Legend: Tenacity",
+        "id": 9105,
+        "rawDescription": "perk_tooltip_9105",
+        "rawDisplayName": "perk_displayname_9105"
+      },
+      {
+        "displayName": "Last Stand",
+        "id": 8299,
+        "rawDescription": "perk_tooltip_8234",
+        "rawDisplayName": "perk_displayname_8234"
+      },
+      {
+        "displayName": "Second Wind",
+        "id": 8444,
+        "rawDescription": "perk_tooltip_SecondWind",
+        "rawDisplayName": "perk_displayname_SecondWind"
+      },
+      {
+        "displayName": "Unflinching",
+        "id": 8242,
+        "rawDescription": "perk_tooltip_Unflinching",
+        "rawDisplayName": "perk_displayname_Unflinching"
+      }
+    ],
+    "keystone": {
+      "displayName": "Lethal Tempo",
+      "id": 8008,
+      "rawDescription": "perk_tooltip_LethalTempo",
+      "rawDisplayName": "perk_displayname_LethalTempo"
+    },
+    "primaryRuneTree": {
+      "displayName": "Precision",
+      "id": 8000,
+      "rawDescription": "perkstyle_tooltip_7201",
+      "rawDisplayName": "perkstyle_displayname_7201"
+    },
+    "secondaryRuneTree": {
+      "displayName": "Resolve",
+      "id": 8400,
+      "rawDescription": "perkstyle_tooltip_7204",
+      "rawDisplayName": "perkstyle_displayname_7204"
+    },
+    "statRunes": [
+      {
+        "id": 5007,
+        "rawDescription": "perk_tooltip_StatModCooldownReductionScaling"
+      },
+      {
+        "id": 5002,
+        "rawDescription": "perk_tooltip_StatModArmor"
+      },
+      {
+        "id": 5002,
+        "rawDescription": "perk_tooltip_StatModArmor"
+      }
+    ]
+  },
+  "level": 1,
+  "summonerName": "MrWarhawk",
+  "teamRelativeColors": true
+}
