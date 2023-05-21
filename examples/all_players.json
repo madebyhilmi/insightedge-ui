@@ -1,0 +1,242 @@
+[
+  {
+    "championName": "Ezreal",
+    "isBot": false,
+    "isDead": false,
+    "items": [
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Doran's Blade",
+        "itemID": 1055,
+        "price": 450,
+        "rawDescription": "GeneratedTip_Item_1055_Description",
+        "rawDisplayName": "Item_1055_Name",
+        "slot": 1
+      },
+      {
+        "canUse": true,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Stealth Ward",
+        "itemID": 3340,
+        "price": 0,
+        "rawDescription": "GeneratedTip_Item_3340_Description",
+        "rawDisplayName": "Item_3340_Name",
+        "slot": 6
+      }
+    ],
+    "level": 2,
+    "position": "",
+    "rawChampionName": "game_character_displayname_Ezreal",
+    "rawSkinName": "game_character_skin_displayname_Ezreal_22",
+    "respawnTimer": 0,
+    "runes": {
+      "keystone": {
+        "displayName": "Press the Attack",
+        "id": 8005,
+        "rawDescription": "perk_tooltip_PressTheAttack",
+        "rawDisplayName": "perk_displayname_PressTheAttack"
+      },
+      "primaryRuneTree": {
+        "displayName": "Precision",
+        "id": 8000,
+        "rawDescription": "perkstyle_tooltip_7201",
+        "rawDisplayName": "perkstyle_displayname_7201"
+      },
+      "secondaryRuneTree": {
+        "displayName": "Inspiration",
+        "id": 8300,
+        "rawDescription": "perkstyle_tooltip_7203",
+        "rawDisplayName": "perkstyle_displayname_7203"
+      }
+    },
+    "scores": {
+      "assists": 0,
+      "creepScore": 0,
+      "deaths": 0,
+      "kills": 2,
+      "wardScore": 0
+    },
+    "skinID": 22,
+    "skinName": "PsyOps Ezreal",
+    "summonerName": "Ojifu",
+    "summonerSpells": {
+      "summonerSpellOne": {
+        "displayName": "Heal",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+      },
+      "summonerSpellTwo": {
+        "displayName": "Flash",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+      }
+    },
+    "team": "ORDER"
+  },
+  {
+    "championName": "Kai'Sa",
+    "isBot": false,
+    "isDead": false,
+    "items": [
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Doran's Blade",
+        "itemID": 1055,
+        "price": 450,
+        "rawDescription": "GeneratedTip_Item_1055_Description",
+        "rawDisplayName": "Item_1055_Name",
+        "slot": 0
+      },
+      {
+        "canUse": true,
+        "consumable": true,
+        "count": 1,
+        "displayName": "Health Potion",
+        "itemID": 2003,
+        "price": 50,
+        "rawDescription": "GeneratedTip_Item_2003_Description",
+        "rawDisplayName": "Item_2003_Name",
+        "slot": 1
+      },
+      {
+        "canUse": true,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Stealth Ward",
+        "itemID": 3340,
+        "price": 0,
+        "rawDescription": "GeneratedTip_Item_3340_Description",
+        "rawDisplayName": "Item_3340_Name",
+        "slot": 6
+      }
+    ],
+    "level": 1,
+    "position": "",
+    "rawChampionName": "game_character_displayname_Kaisa",
+    "rawSkinName": "game_character_skin_displayname_Kaisa_16",
+    "respawnTimer": 0,
+    "runes": {
+      "keystone": {
+        "displayName": "Conqueror",
+        "id": 8010,
+        "rawDescription": "perk_tooltip_Conqueror",
+        "rawDisplayName": "perk_displayname_Conqueror"
+      },
+      "primaryRuneTree": {
+        "displayName": "Precision",
+        "id": 8000,
+        "rawDescription": "perkstyle_tooltip_7201",
+        "rawDisplayName": "perkstyle_displayname_7201"
+      },
+      "secondaryRuneTree": {
+        "displayName": "Domination",
+        "id": 8100,
+        "rawDescription": "perkstyle_tooltip_7200",
+        "rawDisplayName": "perkstyle_displayname_7200"
+      }
+    },
+    "scores": {
+      "assists": 0,
+      "creepScore": 0,
+      "deaths": 1,
+      "kills": 0,
+      "wardScore": 0
+    },
+    "skinID": 16,
+    "skinName": "iG Kai'Sa",
+    "summonerName": "Thaenn",
+    "summonerSpells": {
+      "summonerSpellOne": {
+        "displayName": "Heal",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+      },
+      "summonerSpellTwo": {
+        "displayName": "Flash",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+      }
+    },
+    "team": "CHAOS"
+  },
+  {
+    "championName": "Nasus",
+    "isBot": false,
+    "isDead": true,
+    "items": [
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Tear of the Goddess",
+        "itemID": 3070,
+        "price": 400,
+        "rawDescription": "GeneratedTip_Item_3070_Description",
+        "rawDisplayName": "Item_3070_Name",
+        "slot": 0
+      },
+      {
+        "canUse": true,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Stealth Ward",
+        "itemID": 3340,
+        "price": 0,
+        "rawDescription": "GeneratedTip_Item_3340_Description",
+        "rawDisplayName": "Item_3340_Name",
+        "slot": 6
+      }
+    ],
+    "level": 1,
+    "position": "",
+    "rawChampionName": "game_character_displayname_Nasus",
+    "respawnTimer": 3.3104631900787354,
+    "runes": {
+      "keystone": {
+        "displayName": "Lethal Tempo",
+        "id": 8008,
+        "rawDescription": "perk_tooltip_LethalTempo",
+        "rawDisplayName": "perk_displayname_LethalTempo"
+      },
+      "primaryRuneTree": {
+        "displayName": "Precision",
+        "id": 8000,
+        "rawDescription": "perkstyle_tooltip_7201",
+        "rawDisplayName": "perkstyle_displayname_7201"
+      },
+      "secondaryRuneTree": {
+        "displayName": "Resolve",
+        "id": 8400,
+        "rawDescription": "perkstyle_tooltip_7204",
+        "rawDisplayName": "perkstyle_displayname_7204"
+      }
+    },
+    "scores": {
+      "assists": 0,
+      "creepScore": 0,
+      "deaths": 1,
+      "kills": 0,
+      "wardScore": 0
+    },
+    "skinID": 0,
+    "summonerName": "MrWarhawk",
+    "summonerSpells": {
+      "summonerSpellOne": {
+        "displayName": "Teleport",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+      },
+      "summonerSpellTwo": {
+        "displayName": "Ghost",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+      }
+    },
+    "team": "CHAOS"
+  }
+]
