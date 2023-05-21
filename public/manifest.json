@@ -2,9 +2,9 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "Sample App",
-    "author": "Overwolf",
-    "version": "1.0.1",
+    "name": "InsightEdge",
+    "author": "Binary Hive",
+    "version": "0.1.0",
     "minimum-overwolf-version": "0.160.0",
     "description": "An example app for developers new to Overwolf",
     "dock_button_title": "InsightEdge",
