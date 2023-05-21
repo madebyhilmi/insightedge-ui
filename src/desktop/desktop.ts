@@ -1,5 +1,5 @@
 import { AppWindow } from '../AppWindow';
-import { kWindowNames } from '../constants';
+import { kWindowNames } from '../config/overwolf-constants';
 
 // The desktop window is the window displayed while game is not running.
 // In our case, our desktop window has no logic - it only displays static data.

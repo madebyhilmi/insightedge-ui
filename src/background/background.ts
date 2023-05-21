@@ -1,6 +1,6 @@
 import { OWGames, OWGameListener, OWWindow } from '@overwolf/overwolf-api-ts';
 
-import { kWindowNames, kGameClassIds } from '../constants';
+import { kWindowNames, kGameClassIds } from '../config/overwolf-constants';
 
 import RunningGameInfo = overwolf.games.RunningGameInfo;
 import AppLaunchTriggeredEvent = overwolf.extensions.AppLaunchTriggeredEvent;

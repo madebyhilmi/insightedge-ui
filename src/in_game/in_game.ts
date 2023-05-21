@@ -1,29 +1,25 @@
 import { OWGames, OWGamesEvents, OWHotkeys } from '@overwolf/overwolf-api-ts';
 
-import { AppWindow } from '../AppWindow';
-import { kHotkeys, kWindowNames, kGamesFeatures } from '../constants';
+import { kHotkeys, kWindowNames, kGamesFeatures } from '../config/overwolf-constants';
 
 import WindowState = overwolf.windows.WindowStateEx;
+import { InGameWindow } from '../in-game-window';
+import { Constants } from '../config/constants';
 
 // The window displayed in-game while a game is running.
 // It listens to all info events and to the game events listed in the consts.ts file
 // and writes them to the relevant log using <pre> tags.
 // The window also sets up Ctrl+F as the minimize/restore hotkey.
 // Like the background window, it also implements the Singleton design pattern.
-class InGame extends AppWindow {
+class InGame extends InGameWindow {
   private static _instance: InGame;
   private _gameEventsListener: OWGamesEvents;
-  private _eventsLog: HTMLElement;
-  private _infoLog: HTMLElement;
+  private _teamTotalGold: HTMLElement;
 
   private constructor() {
     super(kWindowNames.inGame);
     this.handleTabHold = this.handleTabHold.bind(this);
-    this._eventsLog = document.getElementById('eventsLog');
-    this._infoLog = document.getElementById('infoLog');
-
-    // this.setToggleHotkeyBehavior();
-    // this.setToggleHotkeyText();
+    this._teamTotalGold = document.getElementById('allied-gold');
     overwolf.settings.hotkeys.onHold.addListener(this.handleTabHold);
   }
 
@@ -54,7 +50,7 @@ class InGame extends AppWindow {
   }
 
   private onInfoUpdates(info) {
-    this.logLine(this._infoLog, info, false);
+    console.log(info);
   }
 
   // Special events will be highlighted in the event log
@@ -74,43 +70,9 @@ class InGame extends AppWindow {
 
       return false;
     });
-    this.logLine(this._eventsLog, e, shouldHighlight);
   }
 
-  // Displays the toggle minimize/restore hotkey in the window header
-  private async setToggleHotkeyText() {
-    const gameClassId = await this.getCurrentGameClassId();
-    const hotkeyText = await OWHotkeys.getHotkeyText(
-      kHotkeys.toggle,
-      gameClassId
-    );
-    const hotkeyElem = document.getElementById('hotkey');
-    hotkeyElem.textContent = hotkeyText;
-  }
-
-  // Sets toggleInGameWindow as the behavior for the Ctrl+F hotkey
-  private async setToggleHotkeyBehavior() {
-    const toggleInGameWindow = async (
-      hotkeyResult: overwolf.settings.hotkeys.OnPressedEvent
-    ): Promise<void> => {
-      console.log(`pressed hotkey for ${hotkeyResult.name}`);
-      const inGameState = await this.getWindowState();
-
-      if (
-        inGameState.window_state === WindowState.NORMAL ||
-        inGameState.window_state === WindowState.MAXIMIZED
-      ) {
-        this.currWindow.minimize();
-      } else if (
-        inGameState.window_state === WindowState.MINIMIZED ||
-        inGameState.window_state === WindowState.CLOSED
-      ) {
-        this.currWindow.restore();
-      }
-    };
-
-    OWHotkeys.onHotkeyDown(kHotkeys.toggle, toggleInGameWindow);
-  }
+  // Sets handleTabHold to when 'Tab' is in the state 'down' the overlay is displayed
   private async handleTabHold(hotkeyEvent) {
     console.log(`state = ${hotkeyEvent.state}`);
     console.log(`name = ${hotkeyEvent.name}`);
@@ -118,13 +80,19 @@ class InGame extends AppWindow {
     const inGameState = await this.currWindow.getWindowState();
     if (hotkeyEvent.name === kHotkeys.toggle) {
       if (
-        hotkeyEvent.state === 'down' &&
+        hotkeyEvent.state === Constants.Down &&
         (inGameState.window_state === WindowState.MINIMIZED ||
           inGameState.window_state === WindowState.CLOSED)
       ) {
+        const randomNumber = Math.floor(Math.random() * 6000) + 500;
+        this._teamTotalGold.textContent = `${randomNumber}G`;
         this.currWindow.restore();
+        const isRestored = true;
+        if (isRestored) {
+          this.currWindow.maximize();
+        }
       } else if (
-        hotkeyEvent.state === 'up' &&
+        hotkeyEvent.state === Constants.Up &&
         (inGameState.window_state === WindowState.NORMAL ||
           inGameState.window_state === WindowState.MAXIMIZED)
       ) {

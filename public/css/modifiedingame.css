@@ -1,0 +1,66 @@
+.main-window {
+    background-color: transparent;
+    color: white;
+}
+
+#total-gold-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 26.5vh;
+    color: white;
+    row-gap: 50px;
+}
+
+#allied-gold {
+    margin-right: 2vw;
+}
+
+#enemy-gold {
+    margin-left: 2vw;
+}
+
+#top-lane {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 6vh;
+    margin-left: 17vw;
+}
+
+#gold-remaining {
+    margin-right: 20vw;
+}
+
+#item-gold-total {
+    margin-top: 0.5vh;
+    margin-left: 8vw;
+}
+/*#jungle{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: left;*/
+/*    margin-top: 3.5%;*/
+/*    margin-left: 17.5%;*/
+/*}*/
+/*#mid-lane{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: left;*/
+/*    margin-top: 3.5%;*/
+/*    margin-left: 17.5%;*/
+/*}*/
+/*#bottom-lane{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: left;*/
+/*    margin-top: 3.5%;*/
+/*    margin-left: 17.5%;*/
+/*}*/
+/*#support{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: left;*/
+/*    margin-top: 3.5%;*/
+/*    margin-left: 17.5%;*/
+/*}*/
