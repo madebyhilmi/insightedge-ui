@@ -1,6 +1,6 @@
 .main-window {
     background-color: transparent;
-    color: white;
+    color: #C89B3C;
 }
 
 #total-gold-row {
@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 26.5vh;
-    color: white;
+    color: #C89B3C;
     row-gap: 50px;
 }
 

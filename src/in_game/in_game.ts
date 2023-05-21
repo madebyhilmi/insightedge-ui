@@ -86,11 +86,7 @@ class InGame extends InGameWindow {
       ) {
         const randomNumber = Math.floor(Math.random() * 6000) + 500;
         this._teamTotalGold.textContent = `${randomNumber}G`;
-        this.currWindow.restore();
-        const isRestored = true;
-        if (isRestored) {
-          this.currWindow.maximize();
-        }
+        this.currWindow.maximize();
       } else if (
         hotkeyEvent.state === Constants.Up &&
         (inGameState.window_state === WindowState.NORMAL ||
