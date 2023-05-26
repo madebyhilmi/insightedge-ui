@@ -1,6 +1,10 @@
-import { OWGames, OWGamesEvents, OWHotkeys } from '@overwolf/overwolf-api-ts';
+import { OWGames, OWGamesEvents } from '@overwolf/overwolf-api-ts';
 
-import { kHotkeys, kWindowNames, kGamesFeatures } from '../config/overwolf-constants';
+import {
+  kHotkeys,
+  kWindowNames,
+  kGamesFeatures,
+} from '../config/overwolf-constants';
 
 import WindowState = overwolf.windows.WindowStateEx;
 import { InGameWindow } from '../in-game-window';
@@ -9,7 +13,7 @@ import { Constants } from '../config/constants';
 // The window displayed in-game while a game is running.
 // It listens to all info events and to the game events listed in the consts.ts file
 // and writes them to the relevant log using <pre> tags.
-// The window also sets up Ctrl+F as the minimize/restore hotkey.
+// The window also sets up 'Tab' as the minimize/restore hotkey.
 // Like the background window, it also implements the Singleton design pattern.
 class InGame extends InGameWindow {
   private static _instance: InGame;
@@ -74,13 +78,10 @@ class InGame extends InGameWindow {
 
   // Sets handleTabHold to when 'Tab' is in the state 'down' the overlay is displayed
   private async handleTabHold(hotkeyEvent) {
-    console.log(`state = ${hotkeyEvent.state}`);
-    console.log(`name = ${hotkeyEvent.name}`);
-    console.log(`second.construction = ${this.currWindow}`);
     const inGameState = await this.currWindow.getWindowState();
     if (hotkeyEvent.name === kHotkeys.toggle) {
       if (
-        hotkeyEvent.state === Constants.Down &&
+        hotkeyEvent.state === Constants.down &&
         (inGameState.window_state === WindowState.MINIMIZED ||
           inGameState.window_state === WindowState.CLOSED)
       ) {
@@ -88,7 +89,7 @@ class InGame extends InGameWindow {
         this._teamTotalGold.textContent = `${randomNumber}G`;
         this.currWindow.maximize();
       } else if (
-        hotkeyEvent.state === Constants.Up &&
+        hotkeyEvent.state === Constants.up &&
         (inGameState.window_state === WindowState.NORMAL ||
           inGameState.window_state === WindowState.MAXIMIZED)
       ) {

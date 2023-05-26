@@ -1,4 +1,4 @@
 export class Constants {
-  public static readonly Down = 'down';
-  public static readonly Up = 'up';
+  public static readonly down: string = 'down';
+  public static readonly up: string = 'up';
 }
