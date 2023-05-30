@@ -2,52 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="../../css/general.css" />
-  <link rel="stylesheet" href="../../css/header.css" />
-  <link rel="stylesheet" href="../../css/ingame.css" />
-  <link rel="stylesheet" href="../../css/modal.css" />
   <title>InsightEdge - In-Game page</title>
+  <link rel="stylesheet" href="../../css/modifiedingame.css"/>
 </head>
-<body class="in-game">
-  <!-- -------------------------------- Header ------------------------------- -->
-
-  <header id="header" class="app-header">
-    <img src="../../img/header_icon.svg" />
-    <h1>InsightEdge / In-Game Window</h1>
-    <h1 class="hotkey-text">
-      Show/Hide Hotkey:
-      <kbd id="hotkey"></kbd>
-    </h1>
-    <div class="window-controls-group">
-      <button id="minimizeButton" class="window-control window-control-minimize" />
-      <button id="maximizeButton" class="window-control window-control-maximize" />
-      <button id="closeButton" class="window-control window-control-close" />
-    </div>
-  </header>
-
-  <!-- --------------------------------- Main -------------------------------- -->
-  <main>
-    <div id="logs">
-      <div id="events" class="logColumn">
-        <h1>Game Events</h1>
-        <div id="eventsLog" class="dataText">
-        </div>
-      </div>
-      <div id="infoUpdates" class="logColumn">
-        <h1>Info Updates</h1>
-        <div id="infoLog" class="dataText"></div>
-      </div>
-    </div>
-    <div id="other">
-      <h1>Real-time Game Data</h1>
-      <p id="infoParagraph">
-        The background controller of this app is listening to all the game
-        events and info updates, and sends them to this window, that prints
-        them to the screen. Some specific events (Match Start/End, Kill and
-        Death) are painted in <span style="color: #00DEFA">teal</span> and
-        logged to the developers console.
-      </p>
-    </div>
-  </main>
+<body>
+<div class="main-window">
+  <p id="total-gold-row">
+    <span id="allied-gold">4500G</span>
+    <span id="enemy-gold">6900G</span>
+  </p>
+  <p id="top-lane">
+    <span id="gold-remaining">500G</span>
+    <span id="item-gold-total">5000G</span>
+    <span id="gold-advantage"></span>
+  </p>
+</div>
 </body>
-</html>

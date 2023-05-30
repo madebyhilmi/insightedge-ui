@@ -1,5 +1,5 @@
 import { AppWindow } from '../AppWindow';
-import { kWindowNames } from '../constants';
+import { kWindowNames } from '../config/overwolf-constants';
 import fetch from 'cross-fetch';
 
 class DesktopWindow extends AppWindow {

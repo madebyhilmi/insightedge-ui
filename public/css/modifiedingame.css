@@ -1,0 +1,38 @@
+.main-window {
+    background-color: transparent;
+    color: #C89B3C;
+}
+
+#total-gold-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 26.5vh;
+    color: #C89B3C;
+    row-gap: 50px;
+}
+
+#allied-gold {
+    margin-right: 2vw;
+}
+
+#enemy-gold {
+    margin-left: 2vw;
+}
+
+#top-lane {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 6vh;
+    margin-left: 17vw;
+}
+
+#gold-remaining {
+    margin-right: 20vw;
+}
+
+#item-gold-total {
+    margin-top: 0.5vh;
+    margin-left: 8vw;
+}

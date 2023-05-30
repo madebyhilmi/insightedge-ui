@@ -10,7 +10,6 @@ export class AppWindow {
   constructor(windowName) {
     this.mainWindow = new OWWindow('background');
     this.currWindow = new OWWindow(windowName);
-
     const closeButton = document.getElementById('closeButton');
     const maximizeButton = document.getElementById('maximizeButton');
     const minimizeButton = document.getElementById('minimizeButton');
