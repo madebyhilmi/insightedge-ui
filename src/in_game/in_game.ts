@@ -9,6 +9,7 @@ import {
 import WindowState = overwolf.windows.WindowStateEx;
 import { InGameWindow } from '../in-game-window';
 import { Constants } from '../config/constants';
+import { DisplaySize } from '../config/display_callback';
 
 // The window displayed in-game while a game is running.
 // It listens to all info events and to the game events listed in the consts.ts file
@@ -79,6 +80,7 @@ class InGame extends InGameWindow {
   // Sets handleTabHold to when 'Tab' is in the state 'down' the overlay is displayed
   private async handleTabHold(hotkeyEvent) {
     const inGameState = await this.currWindow.getWindowState();
+    const windowSize = DisplaySize.instance();
     if (hotkeyEvent.name === kHotkeys.toggle) {
       if (
         hotkeyEvent.state === Constants.down &&
