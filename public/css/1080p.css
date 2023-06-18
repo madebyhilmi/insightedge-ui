@@ -3,11 +3,15 @@
     src: url('../fonts/Spiegel-OTF/spiegel-bold.otf');
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
 .main-window {
     background-color: transparent;
     color: #C89B3C;
     font-family: 'spiegel-bold', serif;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #total-gold-row {
@@ -16,46 +20,116 @@
     justify-content: center;
     margin-top: 26.5vh;
     color: #C89B3C;
-    row-gap: 50px;
 }
 
 #allied-gold {
     margin-right: 2vw;
 }
 
-#enemy-gold {
-    margin-left: 2vw;
-}
-
 #top-lane {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 6vh;
-    margin-left: 17vw;
+    margin-top: 2%;
+    margin-left: 18%;
 }
 
-#gold-remaining {
-    margin-right: 20vw;
+#gold-remaining-top {
+    margin-top: 2%;
+    margin-right: 25%;
+}
+#gold-advantage-top {
+    margin-left: .5%;
 }
 
-#item-gold-total {
-    margin-top: 0.5vh;
-    margin-left: 8vw;
+#item-gold-total-top {
+    margin-top: 2%;
+    margin-left: 9%;
 }
-#jungle{
-    margin-top: 6vh;
-    margin-left: 17vw;
+#jungle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.5%;
+    margin-left: 18%;
 }
-#middle{
-    margin-top: 5.5vh;
-    margin-left: 17vw;
+
+#gold-remaining-jungle {
+    margin-top: 2%;
+    margin-right: 25%;
 }
-#adc{
-    margin-top: 6vh;
-    margin-left: 17vw;
+
+#gold-advantage-jungle {
+    margin-left: .5%;
 }
-#support{
-    margin-top: 6vh;
-    margin-left: 17vw;
+
+#item-gold-total-jungle {
+    margin-top: 2%;
+    margin-left: 9%;
+}
+
+#middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.5%;
+    margin-left: 18%;
+}
+
+#gold-remaining-mid {
+    margin-top: 2%;
+    margin-right: 25%;
+}
+
+#gold-advantage-mid {
+    margin-left: .5%;
+}
+
+#item-gold-total-mid {
+    margin-top: 2%;
+    margin-left: 9%;
+}
+
+#adc {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.5%;
+    margin-left: 18%;
+}
+
+#gold-remaining-adc {
+    margin-top: 2%;
+    margin-right: 25%;
+}
+
+#gold-advantage-adc {
+    margin-left: .5%;
+}
+
+#item-gold-total-adc {
+    margin-top: 2%;
+    margin-left: 9%;
+}
+
+#support {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2%;
+    margin-left: 18%;
+}
+
+#gold-remaining-support {
+    margin-top: 2%;
+    margin-right: 25%;
+}
+
+#gold-advantage-support {
+    margin-left: .5%;
+}
+
+#item-gold-total-support {
+    margin-top: 1.7%;
+    margin-left: 9%;
 }

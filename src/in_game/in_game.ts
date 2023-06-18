@@ -9,7 +9,7 @@ import {
 import WindowState = overwolf.windows.WindowStateEx;
 import { InGameWindow } from '../in-game-window';
 import { Constants } from '../config/constants';
-import { DisplaySize } from '../config/display_callback';
+import { DisplaySize } from '../utils/display-helper';
 
 // The window displayed in-game while a game is running.
 // It listens to all info events and to the game events listed in the consts.ts file
