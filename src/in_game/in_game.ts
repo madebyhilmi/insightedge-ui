@@ -60,7 +60,7 @@ class InGame extends InGameWindow {
 
   // Special events will be highlighted in the event log
   private onNewEvents(e) {
-    const shouldHighlight = e.events.some(event => {
+    e.events.some(event => {
       switch (event.name) {
         case 'kill':
         case 'death':
