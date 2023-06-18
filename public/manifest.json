@@ -58,7 +58,7 @@
         }
       },
       "in_game": {
-        "file": "in_game.html",
+        "file": "in-game.html",
         "in_game_only": true,
         "focus_game_takeover": "ReleaseOnHidden",
         "focus_game_takeover_release_hotkey": "sample_app_ts_showhide",

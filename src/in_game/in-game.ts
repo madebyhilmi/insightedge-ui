@@ -10,6 +10,8 @@ import WindowState = overwolf.windows.WindowStateEx;
 import { InGameWindow } from '../in-game-window';
 import { Constants } from '../config/constants';
 import { DisplaySize } from '../utils/display-helper';
+import { PlayerGold } from '@insightedge/insightedge-common';
+import axios from 'axios';
 
 // The window displayed in-game while a game is running.
 // It listens to all info events and to the game events listed in the consts.ts file
@@ -55,7 +57,7 @@ class InGame extends InGameWindow {
   }
 
   private onInfoUpdates(info) {
-    console.log(info);
+    //console.log(info);
   }
 
   // Special events will be highlighted in the event log
@@ -87,6 +89,10 @@ class InGame extends InGameWindow {
         (inGameState.window_state === WindowState.MINIMIZED ||
           inGameState.window_state === WindowState.CLOSED)
       ) {
+        const allPlayerGoldInfo: PlayerGold[] =
+          await this.getCurrentPlayerGoldTotal();
+        // Update each player gold text content to match response from backend
+
         const randomNumber = Math.floor(Math.random() * 6000) + 500;
         this._teamTotalGold.textContent = `${randomNumber}G`;
         this.currWindow.maximize();
@@ -98,6 +104,13 @@ class InGame extends InGameWindow {
         this.currWindow.minimize();
       }
     }
+  }
+
+  private async getCurrentPlayerGoldTotal(): Promise<PlayerGold[]> {
+    const response = await axios.get<PlayerGold[]>(
+      'http://localhost:3000/game/item-gold/all'
+    );
+    return response.data;
   }
 
   // Appends a new line to the specified log
