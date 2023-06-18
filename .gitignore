@@ -19,6 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-
+.vs
 # Overwolf packages
 *.opk

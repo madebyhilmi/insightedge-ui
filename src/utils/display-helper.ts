@@ -1,30 +1,20 @@
-import { OWGames, OWGamesEvents } from '@overwolf/overwolf-api-ts';
-import relaunch = overwolf.extensions.relaunch;
-
 export class DisplaySize {
   public static alterUiSize() {
     overwolf.utils.getMonitorsList(monitorsInfo => {
       const link = document.getElementById(
         'dynamicStylesheet'
       ) as HTMLLinkElement;
-      const primaryDisplayList: any = [];
+      let primaryDisplayHeight: number;
       for (const display of monitorsInfo.displays) {
         if (display.is_primary) {
-          primaryDisplayList.push(display);
+          primaryDisplayHeight = display.height;
         }
       }
-      const monitor = primaryDisplayList[0];
-      const width = monitor.width;
-      const height = monitor.height;
-      const displaySize = {
-        width: width,
-        height: height,
-      };
-      if (displaySize.width === 1920 && displaySize.height === 1080) {
+      if (primaryDisplayHeight === 1080) {
         link.href = '../../css/1080p.css';
-      } else if (displaySize.width === 2560 && displaySize.height === 1440) {
+      } else if (primaryDisplayHeight === 1440) {
         link.href = '../../css/1440p.css';
-      } else if (displaySize.width === 3840 && displaySize.height === 2160) {
+      } else if (primaryDisplayHeight === 2160) {
         link.href = '../../css/4k.css';
       }
     });
