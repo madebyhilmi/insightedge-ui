@@ -80,7 +80,7 @@ class InGame extends InGameWindow {
   // Sets handleTabHold to when 'Tab' is in the state 'down' the overlay is displayed
   private async handleTabHold(hotkeyEvent) {
     const inGameState = await this.currWindow.getWindowState();
-    const windowSize = DisplaySize.instance();
+    const windowSize = DisplaySize.alterUiSize();
     if (hotkeyEvent.name === kHotkeys.toggle) {
       if (
         hotkeyEvent.state === Constants.down &&

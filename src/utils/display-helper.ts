@@ -2,7 +2,7 @@ import { OWGames, OWGamesEvents } from '@overwolf/overwolf-api-ts';
 import relaunch = overwolf.extensions.relaunch;
 
 export class DisplaySize {
-  public static instance() {
+  public static alterUiSize() {
     overwolf.utils.getMonitorsList(monitorsInfo => {
       const link = document.getElementById(
         'dynamicStylesheet'
