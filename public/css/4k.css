@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'spiegel-bold';
+    src: url('../fonts/Spiegel-OTF/spiegel-bold.otf');
+}
+
 .main-window {
     background-color: transparent;
     color: #C89B3C;
+    font-family: 'spiegel-bold', serif;
+    font-size: 16px;
 }
 
 #total-gold-row {
@@ -35,4 +42,20 @@
 #item-gold-total {
     margin-top: 0.5vh;
     margin-left: 8vw;
+}
+#jungle{
+    margin-top: 6vh;
+    margin-left: 17vw;
+}
+#middle{
+    margin-top: 5.5vh;
+    margin-left: 17vw;
+}
+#adc{
+    margin-top: 6vh;
+    margin-left: 17vw;
+}
+#support{
+    margin-top: 6vh;
+    margin-left: 17vw;
 }
